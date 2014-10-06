@@ -1,0 +1,919 @@
+/*
+Theme Name: smart
+Theme URI: https://github.com/psahalot/smart
+Author: IdeaBox Themes
+Author URI: http://ideaboxthemes.com/
+Description: Hi, I am the ultra minimal starter theme smart, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
+Version: 1.0
+License: GNU General Public License V2 or Later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+Text Domain: smart
+Tags: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
+the _s starter theme from Automattic, the guys behind WordPress.
+
+This theme has been derived from _tk https://github.com/Themekraft/_tk which is licensed under GPL. 
+
+_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Twitter Bootstrap
+
+
+*/
+
+/* Import the necessary Bootstrap WP CSS additions */
+@import url( includes/css/bootstrap-wp.css );
+
+
+
+/* My Minimal WordPress Styling comes here */
+
+/* This is a small security for too long strings titles */
+body {
+    word-wrap: break-word;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+}
+
+.clearfix:aftre, .clearfix:before {
+    content: "";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+/* Alignment */
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+img[class*="wp-image-"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wp-caption {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+.wp-caption.aligncenter {
+    margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+}
+.wp-caption .wp-caption-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+    margin-bottom: 1.5em;
+}
+.gallery a img {
+    border: none;
+    height: auto;
+    max-width: 90%;
+}
+.gallery dd {
+    margin: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.slider-wrapper {
+    background-image: url('images/geometic-bg-teal1.jpg');
+    background-color: #2ce0b6;
+}
+
+.main-content-inner {
+    padding-bottom: 1.5em;
+}
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.business-tagline {
+    padding: 0px 0 55px;
+    text-align: center;
+    color: #fff;
+}
+
+.business-tagline h3 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.tagline-description {  
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+.slider-block {
+    padding: 50px 0;
+}
+
+.home-featured {
+    padding: 55px 0;
+    text-align: center;
+}
+
+.featured-title, .testimonial-title {
+    margin-bottom: 50px;  
+    position: relative;
+    text-align: center;
+} 
+
+.read-more-wrapper {
+    position: relative;
+}
+
+
+
+.featured-title span, .read-more span, .testimonial-title span {
+    padding: 8px 25px;
+    text-align: center;
+    background-color: #dadcdd;
+    border-radius: 20px;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
+    position: relative;
+    display: inline-block;
+
+}
+
+.featured-title:before, .read-more-wrapper:before, .testimonial-title:before {
+    position:absolute;
+    content: "";
+    height:4px;
+    width: 100%;
+    background-color: #dadcdd;
+    top:41%;
+    left: 0;
+}
+
+.read-more-wrapper a {
+    text-decoration: none;
+    color: #47494a;
+    font-weight: 700;
+}
+
+.read-more-wrapper {
+    margin-top: 30px;
+}
+
+.featured-image {
+    font-size: 40px;
+    color: #47494a;
+    border: 4px solid #47494a;
+    border-radius: 100%;
+    text-align: center;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+}
+
+.home-featured-middle-area {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.home-featured .featured {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 250px;
+    margin: 0 auto 20px;
+}
+
+.featured {
+    text-align: center;
+}
+
+.home-featured-middle-area {
+    background: #eee;
+}
+
+.featured-middle {
+    padding: 40px 0;
+}
+
+.featured-middle p {
+    color: #b5bec2;
+}
+
+.featured-list-items {
+    padding-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.featured-list-items li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #4b4f51;
+}
+
+.featured-list-items li:before {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    background-color: #2ce0b6;
+    color: #fff;
+    border-radius: 100%;
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.testimonial-wrap {
+    padding: 50px 0;
+}
+
+.testimonial-image img{
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+
+.client-block {
+    padding: 30px;
+    text-align: center;
+
+}
+
+.client-name {
+    padding-bottom: 50px;
+    background: url('images/divider.png') no-repeat center;    
+}
+
+.client-name a {
+    text-align: none;
+    color: #2ce0b6;        
+}
+.cta-area {
+    clear: both;
+    background-color: #2ce0b6;
+    border-top: 1px solid #8B8989;
+    border-bottom: 1px solid #8B8989;
+    margin-bottom: 20px;
+}
+.cta-wrap {
+    padding: 50px 0;
+    color: #fff;
+}
+
+.cta-title {
+    font-size: 25px;
+}
+
+.page-header {
+    border: none;
+}
+
+
+
+.cta-title .fa {
+    background: #fff;
+    padding: 12px 13px;
+    color: #2ce0b6;
+    border-radius: 100%;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.cta-button {
+    float: right;
+}
+
+.cta-button a {
+    padding: 8px 32px;
+    border-radius: 20px;
+    background-color: #eeee22;
+    color: #000;
+    display: inline-block;
+    margin-top: 14px;    
+    text-decoration: none;
+}
+
+.cta-button a:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer {
+    color: #000;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+.site-footer h3 {
+    position:relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+footer .widget-title:after, .sidebar h3:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 66px;
+    bottom: 0px;
+    left: 0;
+    border-bottom: 3px solid #2ce0b6;
+    padding-bottom: 0px;
+    cursor: text;
+    color: inherit;
+}
+
+.sidebar h3 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.nav>li>a:hover {
+    background: none;
+}
+
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #2ce0b6;
+}
+
+.sidebar li:before {
+    content: "\f101";
+    font-family: "FontAwesome";
+    float: left;
+    margin-right: 10px;
+    color: #2ce0b6;
+    margin-top: 11px;
+}
+
+
+.site-footer-inner-wrap {
+    margin-bottom: 30px;
+}
+
+.social-links {
+    float: right;
+}
+
+.social-links ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-links ul li {
+    display: inline-block;   
+    padding: 0 10px;
+}
+
+.site-info {
+    padding-bottom: 20px;
+}
+
+.social-links li a {
+    text-decoration: none;
+    font-size: 26px;
+    color: #dadcdd;
+    border-radius: 100%;
+    border: 2px solid #dadcdd;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    padding: 0 7px;
+    display: inline-block;
+}
+
+.social-links li a:hover {
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.alert-info {
+    display: none;
+}
+.headsection h1, .headsection p {
+    text-align: center;    
+}
+
+.headsection {
+    background: #2ce0b6;
+    color: #ffffff;
+    padding: 40px 0;    
+    margin-bottom: 60px;
+}
+
+.headsection .page-title a {
+    color: #ffffff;
+}
+
+.headsection .page-header {
+    padding-bottom: 0;
+    margin: 0;   
+    text-align: center;
+}
+
+.post-navigation ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.nav-next {
+    float: right;
+}
+
+.pager li > a, .pager li > span {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.pager li > a:hover {
+    background-color: #2ce0b6;
+    color: #ffffff;
+}
+
+.page-header, .page-title {
+    margin-top: 0;
+}
+
+.sidebar {
+    padding-left: 40px;
+}
+
+.sidebar-padder form label {
+    width: 100%;
+}
+
+.page-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+address {
+    float: left;
+    margin-top: 2px;
+    margin-right: 20px;
+}
+
+.fa-user {
+    float:left;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+.header-meta .fa {
+    margin-right: 10px;
+    color: #545454;
+}
+.entry-date, .post-categories a {
+    margin-right: 20px;
+}
+
+.headsection .container {
+    padding-bottom: 0;
+}
+
+.headsection .container h1 {
+    margin-top: 0;
+}
+
+.header-meta a {
+    font-weight: 300;
+    font-size: 14px;
+    color: #545454;
+    text-decoration: none;
+}
+
+.hentry {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+article .page-header {
+    margin: 0 0 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+}
+.wp-post-image {
+    margin-bottom: 20px;
+}
+
+.more-link,.btn-primary, .search-submit {    
+    background: #2ce0b6;
+    color: #ffffff;
+    display: inline-block;
+    padding: 7px 20px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    border-radius: 0;
+}
+
+.more-link:hover, .btn-primary:hover, .search-submit:hover {
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+
+.comment-respond .comment-form-author,
+.comment-respond .comment-form-email, 
+.comment-respond .comment-form-url {
+    width: 32.0%;
+    float: left;   
+    margin-bottom: 20px;
+}
+
+.comment-respond .comment-form-author,
+.comment-respond .comment-form-email {
+    margin-right: 15px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+
+
+.comment-respond input[type="text"] {
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+/* Clearing */
+.clear {
+    clear: both;
+}
+
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: 2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.widget_search .search-form input[type="submit"] { display: none; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+    max-width: 100%;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+.comment .children { margin-left: 1.5em; }
+
+/*
+ == Quick CSS styling tips ==
+
+ You can start off in a rough direction with some minimal styles.
+ See below for some tips. ;)
+
+
+ == Want to have the whole site wrapped? ==
+
+ Just fill the .container class with some background color to have a the whole site "wrapped".
+ This works so easy because every main part is wrapped only once into a container class by bootstrap.
+ Try out by decommenting the next line and go from there.
+
+ .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+
+ == Want to wrap just the content and sidebar in Bootstrap style? ==
+
+ That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
+
+
+ == Infinite Scrolling by Jetpack ==
+ You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html..
+
+/* Globally hidden elements when Infinite Scroll is supported and in use.
+ * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
+
+/*
+.infinite-scroll .page-links,
+.infinite-scroll.neverending .site-footer {
+        display: none;
+}
+*/
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
+/*
+.infinity-end.neverending .site-footer {
+        display: block;
+}
+*/
+
+/* Hey, if you don't need my comments anymore, just delete me! :)  */
+
+/* Navigation */
+.site-header {
+    margin-top: 25px;
+}
+
+.site-title a {
+    color: #BE4242;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar-default{
+    background:none;
+    border:none;
+}
+
+
+
+.navbar-collapse{
+    padding:0;
+}
+
+.navbar-collapse ul {
+    float: right;
+}
+
+.site-navigation {
+    float: right;
+}
+
+.site-navigation-inner{
+    padding: 13px 0;
+    float: right;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
+    background:none;
+    color:#000;
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover, 
+.navbar-default .navbar-nav>.open>a:focus{
+    background:none;
+}
+
+.navbar-default .navbar-nav>li>a{
+}
+
+.dropdown-menu{
+    border-radius:0;
+    padding:0;
+    margin-top:0;
+}
+
+.dropdown-menu li a{
+    padding:10px 20px;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus{
+    background:#009cee;
+}
+
+.navbar-toggle{
+    float:none;
+    margin:0;
+    width:25%;
+    border-radius:0;
+    background:#111;
+    border:none;
+}
+
+.navbar-header{
+    text-align:center;
+}
+
+.sr-only{
+    overflow:visible;
+    position:relative;
+}
+
+.navbar-toggle .icon-bar{
+    margin-top:-20px;
+    background-color:#fff !important;
+}
+
+@media (min-width:320px){
+
+    .site-navigation-inner{
+        float:none;
+        padding:13px 0 0;
+    }
+
+    .site-navigation{
+        padding:0;
+    }
+
+    .navbar{
+        min-height:0;
+        margin-bottom:0;
+    }
+
+    .navbar-nav>li>a{
+        padding:10px 20px;
+    }
+
+    .navbar-nav{
+        margin:0;
+        box-shadow:none;
+    }
+
+    .navbar-default .navbar-collapse{
+        border:none;
+        box-shadow:none;
+    }
+
+    .navbar-default a{
+        text-align:center;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color:#fff;
+    }
+
+}
+
+
+@media (min-width:768px){
+
+    .site-navigation-inner{
+        float:right;
+        padding:13px 0;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color:#111;
+    }
+}
+
+@media (max-width:991px) {
+    .nav-next {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    .site-navigation {
+        float: none;
+    }
+
+    .navbar-toggle {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    .navbar-default .navbar-toggle:hover, 
+    .navbar-default .navbar-toggle:focus{
+        background-color: #000;
+    }
+
+    .sr-only {
+        font-weight: 700;
+        color: #fff;
+        font-size: 20px;
+    }
+    .navbar-collapse ul {
+        float: none;
+    }
+
+    .footer-bottom-left {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .social-links {
+        float: none;
+        text-align: center;
+    }
+    
+    .cta-left {
+        text-align: center;
+    }
+    
+    .cta-button {
+        float: none;
+        text-align: center;
+    }
+    
+    .featured-middle-right {
+        text-align: center;
+    }
+    
+    .featured-list-item h3, .featured-list-item p {
+        text-align: center;
+    }
+    
+  
+    
+}
+
+@media (max-width:320px) {
+    .site-navigation-inner {
+        float: none;
+    }
+    .navbar-default > .navbar-collapse ul {
+        text-align: center;
+    }
+    
+
+    .site-header-inner {
+        text-align: center;
+    }
+    
+    
+}
